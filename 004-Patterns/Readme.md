@@ -338,3 +338,106 @@ int main() {
    44
     5
 ```
+
+```c++
+
+int main() {
+    // Hollow diamond pattern
+    int n = 6;
+
+    // Upper Part
+    for (int i=0; i < n; i++){
+        for (int j=0; j < n; j++) {
+            if (j == n-i-1) {
+                cout << "*";
+            }
+            else {
+                cout << " ";
+            }
+        }
+        for (int j=0; j < n - 1; j++) {
+            if (j == i - 1) {
+                cout << "*";
+            } else {
+                cout << " ";
+            }
+        }
+
+    cout << endl;
+    }
+
+    //Lower Part
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n; j++) {
+            if (i + 1 == j) {
+                cout << "*";
+            } else {
+                cout << " ";
+            }
+        }
+        for (int j = 0; j < n - 1; j++) {
+            if (j == n - i - 3) {
+                cout << "*";
+            } else {
+                cout << " ";
+            }
+        }
+        cout << endl;
+    }
+};
+
+//Output
+     *
+    * *
+   *   *
+  *     *
+ *       *
+*         *
+ *       *
+  *     *
+   *   *
+    * *
+     *
+```
+
+```c++
+int main() {
+    // Butterfly Pattern
+    int n = 4;
+    for (int i=0; i<n; i++) {
+        for(int j=0; j<=i; j++) {
+            cout << "*";
+        }
+
+        for (int j=0; j<2*n-2*i-2; j++) {
+            if (i!=n-1) {
+                cout << " ";
+            }
+        }
+
+        for(int j=0; j<=i; j++) {
+            cout << "*";
+        }
+
+        cout << endl;
+    }
+
+    for (int i=0; i<n; i++){
+        for (int j=n; j>i; j--) {
+            cout << "*";
+        }
+        for (int j=0; j<2*i; j++) {
+                if (i!=0) {
+                    cout << " ";
+                }
+            }
+        for (int j=n; j>i; j--) {
+            if (j!=0) {
+                cout << "*";
+            }
+        }
+        cout << endl;
+    }
+
+};
+```
