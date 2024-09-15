@@ -51,12 +51,31 @@ int factorial(int N) {
     }
 }
 
+// Calculate Sum of Digits of a Number
+int sumOfDigits(int N) {
+
+    int digitSum = 0, rem;
+
+    while (N > 0) {
+        rem = N % 10;
+        digitSum += rem;
+        N = N/10;
+    }
+
+    return digitSum;
+}
+
+// nCr -> Binomial Factorial
+float binomialFact(int n, int r) {
+
+    return (
+        (float)factorial(n) / (float)(factorial(r) * factorial(n - r))
+    );
+
+}
+
 int main() {
     // Function Call/ Invoke
-    printHello();
-    printHello();
-    printHello();
-    printHello();
     printHello();
 
     // Sum Function Invoke
@@ -70,6 +89,12 @@ int main() {
 
     // Factorial Function Invoke
     cout << "Factorial of N = " << factorial(6) << endl;
+
+    // Sum of Digits Function Invoke
+    cout << "Sum Of Digits = " << sumOfDigits(75) << endl;
+
+    // Binomial Factorial Function Invoke
+    cout << "nCr = " << binomialFact(6,3) << endl;
 
     return 0;
 }
