@@ -4,10 +4,10 @@ using namespace std;
 int linearSearch(int array[], int target, int arrSize) {
 
     for(int i = 0; i < arrSize; i++) {
-        if(array[i] == target) return i;
+        if(array[i] == target) return i; //Found
     }
 
-    return -1;
+    return -1; //Not Found
 }
 
 
